@@ -10,8 +10,6 @@
 
 # my-zsh config
 export ZSH=$HOME/.zsh
-# oh-my-zsh config
-# export ZSH=$HOME/.oh-my-zsh
 
 # Usage: init_config CONFIG_FILE 
 # Description: Source the configuration file
