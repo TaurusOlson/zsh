@@ -10,6 +10,7 @@
 
 # my-zsh config
 export ZSH=$HOME/.zsh
+# export ZSH=$HOME/.oh-my-zsh
 
 # Usage: init_config CONFIG_FILE 
 # Description: Source the configuration file
@@ -30,9 +31,6 @@ alias_config() {
     alias $CONFIG_ALIAS="vi $CONFIG_FILE"
 }
 
-# FUNCTIONS -------------------------------------------------------------------
-# fpath=($ZSH/functions $fpath)
-
 
 # LIB -------------------------------------------------------------------------
 for config_file ($ZSH/lib/*.zsh) 
@@ -40,6 +38,12 @@ do
     init_config $config_file
     alias_config $config_file
 done
+
+# COMPLETION ------------------------------------------------------------------
+autoload -U $ZSH/functions/*(:t)
+
+# FUNCTIONS -------------------------------------------------------------------
+fpath=($ZSH/functions $fpath)
 
 
 # ALIASES ---------------------------------------------------------------------
@@ -55,9 +59,11 @@ alias .bashrc="vi $HOME/.bashrc"
 
 # PLUGINS ---------------------------------------------------------------------
 plugin=${plugin:=()}
-plugins=( brew github )
+plugins=( brew github processing git-completion git-flow-completion )
 for plugin ($plugins) source $ZSH/plugins/$plugin/$plugin.plugin.zsh
 
 
 # RVM -------------------------------------------------------------------- {{{1
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# ~/bin/info.sh

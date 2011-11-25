@@ -1,0 +1,4 @@
+p() {
+    cd ~/Documents/Processing/mysketches/$1
+}
+

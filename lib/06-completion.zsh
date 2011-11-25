@@ -4,8 +4,6 @@ compctl -a alias
 
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
-# cdpath=( . $HOME/Work )
-
 # pip zsh completion start
 function _pip_completion {
   local words cword
@@ -18,5 +16,17 @@ function _pip_completion {
 compctl -K _pip_completion pip
 # pip zsh completion end
 
+# TOLSON
 tolson_options=(up bundles vimbundles)
 compctl -k tolson_options tolson
+
+# PID COMPLETION
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
+
+# VERBOSE
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%B%d%b'
+zstyle ':completion:*:messages' format '%d'
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion:*' group-name ''

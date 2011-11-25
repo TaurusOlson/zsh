@@ -1,0 +1,3 @@
+#compdef zfunc
+_files -W ~/.zsh/functions
+

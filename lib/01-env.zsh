@@ -48,6 +48,7 @@ export P5=$DOC/Processing
 export DRLISTS=$DROP/DrLists
 export LATEX=$HOME/Latex
 export MUSIC=$HOME/Music/iTunes/iTunes\ Music
+export HG=
 
 
 # PYTHON ----------------------------------------------------------------- {{{2

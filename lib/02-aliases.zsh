@@ -34,13 +34,15 @@ alias dvim='cd ~/.vim'
 alias dvip='cd ~/.vim/plugin'
 alias dvib='cd ~/.vim/bundle'
 
+# EMACS ------------------------------------------------------------------ {{{1
+alias .emacs="vi $HOME/.emacs"
 
 # GENERAL SHORTCUTS ------------------------------------------------------ {{{1
 alias dwo="cd $WORK"
 alias ddl="cd $DL  && ll -rt"
 alias dde="cd $DE"
 alias dmu='cd ~/Music/iTunes/iTunes\ Music'
-alias dno="cd ~/Work/NOTES/  && ll -rt"
+alias dno="cd ~/Dropbox/Notes/  && ll -rt"
 alias ddoc="cd $DOC  && ll -rt"
 alias dlst="cd $HOME/.hcss/lstore"
 alias dout="cd $DOC/Outlines"
@@ -61,8 +63,7 @@ alias snippl="cd $SNIPPL"
 
 
 # GIT -------------------------------------------------------------------- {{{1
-alias git=hub
-alias g=git
+alias g=hub
 alias gsub='git submodule'
 alias h=hub
 alias gpush='git push origin master'
@@ -167,12 +168,12 @@ alias fv="open -a fv"
 
 
 # TODO.TXT --------------------------------------------------------------- {{{1
-alias t='~/bin/todo.sh'
-alias tl='~/bin/todo.sh ls'
-alias tlp='todo_sort_projects'
-alias th='~/bin/todo.sh -h'
-alias p="python ~/bin/punch.py"
-alias vt="vi $HOME/Documents/TODO/todo.txt"
+# alias t='~/bin/todo.sh'
+# alias tl='~/bin/todo.sh ls'
+# alias tlp='todo_sort_projects'
+# alias th='~/bin/todo.sh -h'
+# # alias p="python ~/bin/punch.py"
+# alias vt="vi $HOME/Documents/TODO/todo.txt"
 
 
 # DAWN AND PROGRESS ------------------------------------------------------ {{{1
@@ -209,7 +210,7 @@ alias b="boom"
 
 
 # T ---------------------------------------------------------------------------
-alias tt="python $GITHUB/t/t.py --task-dir $DROP/tasks --list tasks.txt"
+alias t="python $GITHUB/t/t.py --task-dir $DROP/tasks --list tasks.txt"
 alias twork="python $GITHUB/t/t.py --task-dir $DROP/tasks --list work.txt"
 alias tnotes="python $GITHUB/t/t.py --task-dir $DROP/tasks --list notes.txt"
 
@@ -221,7 +222,7 @@ alias verletdoc="open $P5/libraries/verletphysics/docs/index.html"
 alias gestaltungdoc="open $P5/libraries/generativedesign/reference/index.html"
 
 
-# MONGODB ---------------------------------------------------------------------
+# MONGODB ---------------------------------------------------------------- {{{1
 alias mongod="mongod -f /usr/local/Cellar/mongodb/1.8.1-x86_64/mongod.conf"
 
 
@@ -237,19 +238,23 @@ alias .Xdefaults="vim $HOME/.Xdefaults"
 alias .dwm="vim $PROG/dwm/config.h"
 
 
-# WMFS -------------------------------------------------------------------- {{{1
+# WMFS ------------------------------------------------------------------- {{{1
 alias .wmfs="vim $HOME/.config/wmfs/wmfsrc"
 
 
-# SCROTWM -------------------------------------------------------------------- {{{1
+# SCROTWM ---------------------------------------------------------------- {{{1
 alias .scrotwm="vim $HOME/.scrotwm.conf"
 
 
 # LATEX ------------------------------------------------------------------ {{{1
 alias dLa="cd $LATEX"
 
-# MPD -------------------------------------------------------------------------
+# MPD -------------------------------------------------------------------- {{{1
 alias mpd="mpd --no-daemon"
+alias music="ncmpcpp"
+
+# JEKYLL ----------------------------------------------------------------- {{{1
+alias jekyll_blog="open http://127.0.0.1:4000/"
 
 
 # vim: set fdm=marker:

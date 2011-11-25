@@ -1,0 +1,2 @@
+#compdef plib
+_files -W ~/Documents/Processing/libraries/

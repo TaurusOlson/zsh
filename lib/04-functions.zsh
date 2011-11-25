@@ -152,3 +152,8 @@ else
 fi
 }
 
+plib() { cd ~/Documents/Processing/libraries/$1; }
+
+p() { cd ~/Documents/Processing/mysketches/$1; }
+
+

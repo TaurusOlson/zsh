@@ -1,0 +1,3 @@
+plib() {
+    cd ~/Documents/Processing/libraries/$1
+}
