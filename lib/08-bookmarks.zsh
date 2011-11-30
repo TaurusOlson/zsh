@@ -1,4 +1,4 @@
-# Usage of the bookmarks: cd ~bookmark
+# Usage of the bookmarks: cd ~<bookmark>
 hash -d cours=$COURS
 hash -d music=$MUSIC
 hash -d lists=$DRLISTS
