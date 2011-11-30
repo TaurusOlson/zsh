@@ -8,9 +8,8 @@
 #
                               
 
-# my-zsh config
+# My zsh config
 export ZSH=$HOME/.zsh
-# export ZSH=$HOME/.oh-my-zsh
 
 # Usage: init_config CONFIG_FILE 
 # Description: Source the configuration file
@@ -31,33 +30,39 @@ alias_config() {
     alias $CONFIG_ALIAS="vi $CONFIG_FILE"
 }
 
+# Load and run compinit
+autoload -U compinit
+compinit -i
 
-# LIB -------------------------------------------------------------------------
+
+# PROFILE ---------------------------------------------------------------- {{{1
+[[ -r $HOME/.profile ]] && source $HOME/.profile
+
+
+# LIB -------------------------------------------------------------------- {{{1
 for config_file ($ZSH/lib/*.zsh) 
 do
     init_config $config_file
     alias_config $config_file
 done
 
-# COMPLETION ------------------------------------------------------------------
+
+# COMPLETION ------------------------------------------------------------- {{{1
 autoload -U $ZSH/functions/*(:t)
 
-# FUNCTIONS -------------------------------------------------------------------
+
+# FUNCTIONS -------------------------------------------------------------- {{{1
 fpath=($ZSH/functions $fpath)
 
 
-# ALIASES ---------------------------------------------------------------------
+# ALIASES ---------------------------------------------------------------- {{{1
 alias sz="source $HOME/.zshrc"
 alias .zshrc="vi $HOME/.zshrc"
 alias sb="source $HOME/.bashrc"
 alias .bashrc="vi $HOME/.bashrc"
 
 
-# PROFILE ---------------------------------------------------------------------
-[[ -r $HOME/.profile ]] && source $HOME/.profile
-
-
-# PLUGINS ---------------------------------------------------------------------
+# PLUGINS ---------------------------------------------------------------- {{{1
 plugin=${plugin:=()}
 plugins=( brew github processing git-completion git-flow-completion )
 for plugin ($plugins) source $ZSH/plugins/$plugin/$plugin.plugin.zsh
@@ -66,4 +71,3 @@ for plugin ($plugins) source $ZSH/plugins/$plugin/$plugin.plugin.zsh
 # RVM -------------------------------------------------------------------- {{{1
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# ~/bin/info.sh
