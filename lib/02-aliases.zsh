@@ -34,8 +34,10 @@ alias dvim='cd ~/.vim'
 alias dvip='cd ~/.vim/plugin'
 alias dvib='cd ~/.vim/bundle'
 
+
 # EMACS ------------------------------------------------------------------ {{{1
 alias .emacs="vi $HOME/.emacs"
+
 
 # GENERAL SHORTCUTS ------------------------------------------------------ {{{1
 alias dwo="cd $WORK"
@@ -86,8 +88,6 @@ alias drop="cd $DROP"
 
 # MISC ------------------------------------------------------------------- {{{1
 alias which="which -a"
-alias dvi2pdf='dvipdfm'
-alias index='more index'
 alias tree='tree -CdD -L 1 '
 alias bye='su -c halt'
 alias cl='clear'
@@ -103,16 +103,6 @@ alias wiki='cat $HOME/vimwiki/index.wiki'
 alias unittest='python -m unittest'
 alias zen="python -c 'import this'"
 alias usb='cd /Volumes/BLUE_KEY'
-alias ipy='ipython --nobanner'
-alias ipylab='ipython2.6 --nobanner -pylab'
-alias ditaa='java -jar ~/bin/ditaa0_9.jar'
-
-# Kill...
-alias k9='kill -9'
-
-#list uniquement les fichiers
-#alias lsf='ls $(ls | cut -d "/" -f2) 2> /dev/null' 
-alias lsf='echo $(ls | cut -d "/" -f2)'
 
 #Un peu de sécurité ne fait pas de m
 alias rm='rm -i'
@@ -120,16 +110,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 # Force
 alias rf='rm -f'
-
-#Raccourcis pour ouvrir les applications Mac===
-alias finder='open $PWD'
-alias Mail='open -a MAil'
-alias preview='open -a preview'
-alias em='open -a Emacs'
-alias octave='/Applications/Octave.app/Contents/Resources/bin/octave'
-alias tm="open -a Safari $DOC/TiddlyWiki/teamtasks.html"
-alias gc="open -a Google\ Chrome.app"
-alias ff="open -a Firefox.app"
 
 # Time
 alias now='date +"%d-%m-%Y %H:%M:%S"'
@@ -187,15 +167,6 @@ alias dj="cd $JEKYLL"
 alias djl="ll -rt $JEKYLLPOSTS"
 
 
-# SVN  ------------------------------------------------------------------------
-alias sscr="cd $HOME/scripts/trunk"
-alias svnls="svn ls -v file://$HOME/svn/"
-alias svnlog="svn log file://$HOME/svn/"
-alias spdr='svn propset svn:keywords "Date Revision"'
-alias spid='svn propset svn:keywords "Id"'
-alias svnrev="svn log -v -r"
-
-
 # POST ------------------------------------------------------------------- {{{1
 alias epost="vi $DOC/Blog/posts.mkd"
 alias rpost="open $DOC/Blog/posts.html"
@@ -228,10 +199,6 @@ alias mongod="mongod -f /usr/local/Cellar/mongodb/1.8.1-x86_64/mongod.conf"
 
 # XDEFAULTS
 alias .Xdefaults="vim $HOME/.Xdefaults"
-
-
-# DRLISTS ---------------------------------------------------------------- {{{1
-# alias focus="yml2rb.rb $LISTS/focus.yml"
 
 
 # DWM -------------------------------------------------------------------- {{{1
