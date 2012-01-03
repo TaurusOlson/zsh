@@ -64,10 +64,12 @@ alias .bashrc="vi $HOME/.bashrc"
 
 # PLUGINS ---------------------------------------------------------------- {{{1
 plugin=${plugin:=()}
-plugins=( brew github processing git-completion git-flow-completion )
+plugins=( brew github processing git-completion git-flow-completion django )
 for plugin ($plugins) source $ZSH/plugins/$plugin/$plugin.plugin.zsh
 
 
 # RVM -------------------------------------------------------------------- {{{1
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# F ---------------------------------------------------------------------- {{{1
+[[ -s "$HOME/Github/f/f.sh" ]] && source "$HOME/Github/f/f.sh"
