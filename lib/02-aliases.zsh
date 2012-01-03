@@ -78,6 +78,7 @@ alias gnp='git-notpushed'
 alias glog="git log --stat --reverse"
 alias gdiff="git diff"
 alias gop="git-open-page.sh"
+alias go="git checkout"
 
 
 # SOUVENIRS -------------------------------------------------------------- {{{1
@@ -87,7 +88,7 @@ alias drop="cd $DROP"
 
 
 # MISC ------------------------------------------------------------------- {{{1
-alias which="which -a"
+alias wa="which -a"
 alias tree='tree -CdD -L 1 '
 alias bye='su -c halt'
 alias cl='clear'
@@ -103,6 +104,7 @@ alias wiki='cat $HOME/vimwiki/index.wiki'
 alias unittest='python -m unittest'
 alias zen="python -c 'import this'"
 alias usb='cd /Volumes/BLUE_KEY'
+alias finder="open -a Finder.app ."
 
 #Un peu de sécurité ne fait pas de m
 alias rm='rm -i'
@@ -214,7 +216,7 @@ alias .scrotwm="vim $HOME/.scrotwm.conf"
 
 
 # LATEX ------------------------------------------------------------------ {{{1
-alias dLa="cd $LATEX"
+alias dLa="cd $WORK/$LATEX"
 
 # MPD -------------------------------------------------------------------- {{{1
 alias mpd="mpd --no-daemon"
@@ -223,5 +225,9 @@ alias music="ncmpcpp"
 # JEKYLL ----------------------------------------------------------------- {{{1
 alias jekyll_blog="open http://127.0.0.1:4000/"
 
+# F ---------------------------------------------------------------------- {{{1
+alias v='f -e vim' # quick opening files with vim
+alias m='f -e mplayer' # quick opening files with mplayer
+alias z='d -e cd' # quick cd into directories, mimicking autojump and z
 
 # vim: set fdm=marker:
