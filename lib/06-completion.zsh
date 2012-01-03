@@ -1,4 +1,5 @@
 # ZSH COMPLETION
+zmodload -i zsh/complist
 
 compctl -a alias
 
@@ -30,3 +31,20 @@ zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format 'No matches for: %d'
 zstyle ':completion:*' group-name ''
+
+### highlight the original input.
+zstyle ':completion:*:original' list-colors "=*=$color[red];$color[bold]"
+
+### colorize hostname completion
+zstyle ':completion:*:*:*:*:hosts' list-colors "=*=$color[cyan];$color[bg-black]"
+
+## add colors to processes for kill completion
+zstyle ':completion:*:*:kill:*' verbose yes
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#) #([^ ]#)*=$color[cyan]=$color[yellow]=$color[green]"
+
+## Manpages, ho!
+zstyle ':completion:*:manuals'       separate-sections true
+zstyle ':completion:*:manuals.(^1*)' insert-sections   true
+
+# Make the nice with git completion and others
+zstyle ':completion::*:(git|less|rm|emacs)' ignore-line true
